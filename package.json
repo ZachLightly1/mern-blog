@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ZachLightly1/mern-blog#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
