@@ -6,7 +6,7 @@ export default function SignUp() {
     const [formData, setFormData] = useState({});
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(false);
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
     };
@@ -34,7 +34,7 @@ export default function SignUp() {
             }
             setLoading(false);
             if (res.ok) {
-                navigate("/sign-up");
+                navigate("/sign-in");
             }
         } catch (error) {
             setErrorMessage(error.message);
@@ -111,7 +111,7 @@ export default function SignUp() {
                     </form>
                     <div className="flex gap-2 text-sm mt-5">
                         <span>Have an account?</span>
-                        <Link to="sign-in" className="text-blue-500">
+                        <Link to="/sign-in" className="text-blue-500">
                             Sign In
                         </Link>
                     </div>
