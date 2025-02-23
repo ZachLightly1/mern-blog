@@ -16,7 +16,7 @@ export const uploadImage = async (req, res, next) => {
 
     try {
         const uploadResult = await cloudinary.uploader.upload(image, {
-            public_id: "test",
+            public_id: imageName,
         });
         res.json(uploadResult);
     } catch (error) {
